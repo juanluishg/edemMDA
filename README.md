@@ -6,5 +6,9 @@ Repositorio de pruebas del Master de Data Analytics de la Escuela de Empresarios
 
 **Curso 2020/2021** 
 
+- [Docker](https://github.com/juanluishg/edemMDA/tree/master/docker)
+- [Tratamiento del Dato](https://github.com/juanluishg/edemMDA/tree/master/Tratamiento_del_Dato)
+- [Programación Estadística con Python](https://github.com/juanluishg/edemMDA/tree/master/Programacion)
+
 
 Juan Luis Hernández García
