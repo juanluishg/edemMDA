@@ -18,6 +18,7 @@ import numpy as np # Operaciones de calculo
 import matplotlib.pyplot as plt # Libreria de gráficos
 
 os.getcwd()
+os.chdir("C:/Users/JuanLu/Dropbox/I.Informatica/Master/edemMDA/Programacion")
 
 #Load rentals
 rentals_2011 = pd.read_csv("washington_bike_rentals_2011.csv", sep=";", decimal=",")
@@ -85,3 +86,36 @@ plt.title("Figure 3. Temperature vs Rentals")
 plt.xlabel("Temperature ºC")
 plt.ylabel("Number Rentals")
 plt.show()
+
+#Add new cases
+#Load rental_weather_2012
+rentals_weather_2012 = pd.read_csv('rentals_weather_2012.csv', sep=";", decimal=",")
+
+rentals_weather_2011.shape
+rentals_weather_2012.shape
+
+rentals_weather_2012.head()
+#QC OK
+
+#Merge two dataframes
+rentals_weather_11_12 = rentals_weather_2011.append(rentals_weather_2012, ignore_index=True)
+
+rentals_weather_11_12.shape
+
+rentals_weather_11_12.head()
+rentals_weather_11_12.tail()
+#QC OK
+
+#Change column order
+orden = rentals_weather_2011.columns
+rentals_weather_11_12 = rentals_weather_11_12[rentals_weather_2011.columns]
+orden2 = ['dteday', 'day', 'weathersit', 'temp_celsius', 'windspeed_kh', 'atemp',
+       'hum', 'season', 'yr', 'mnth', 'holiday', 'weekday', 'workingday',
+       'casual', 'registered', 'cnt']
+rentals_weather_11_12 = rentals_weather_11_12[orden2]
+
+
+rentals_weather_11_12.shape
+rentals_weather_11_12.head()
+rentals_weather_11_12.tail()
+#QC OK
