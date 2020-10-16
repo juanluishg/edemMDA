@@ -88,5 +88,28 @@ Probar mas Snippets
 
 #### zeppelin/Amazon Analysis.json
 
+Pruebas con el dataset del Amazon
+
+Pequeñas gráficas
 
 
+
+#### zeppelin/Exercise 1.json
+
+Pruebas de configuración de las celdas
+
+
+
+#### zeppelin/Parameters.json
+
+Mas pruebas con dataset de Amazon.
+
+Pruebas con parámetros de entrada
+
+
+
+#### zeppelin/Fifa Analysis.json
+
+Gráficas y Análisis mas "completo" del dataset fifa.
+
+*Del profesor*
