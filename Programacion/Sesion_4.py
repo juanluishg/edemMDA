@@ -115,7 +115,7 @@ plt.title('Figure 1. Daily Gicycle rentals in Washington DC \n by Capital bikesh
 plt.xlabel('Number of rented bicycles')
 plt.ylabel('Frecuency')
 
-props = //TODO caja
+props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
 textstr = 'Mean = ' + str(round(m,1)) + '\nS.D = ' + str(round(des,1)) + '\nn = ' + str(round(n,0))
 plt.text(6100,95, textstr, bbox=props)
 
@@ -124,9 +124,24 @@ plt.show()
 
 
 #Añadir lineas de desviacion tipica a la linea de la media y añadir leyenda
-//TODO
+_, bins, _ = plt.hist(x, edgecolor='black', color='green', bins=12) #bins: numero de columnas
+ticks = np.arange(0, 10000, 1000)
+plt.xticks(ticks)
 
+plt.title('Figure 1. Daily Gicycle rentals in Washington DC \n by Capital bikeshare. 2011-2012')
 
+plt.xlabel('Number of rented bicycles')
+plt.ylabel('Frecuency')
+
+props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+textstr = 'Mean = ' + str(round(m,1)) + '\nS.D = ' + str(round(des,1)) + '\nn = ' + str(round(n,0))
+plt.text(6600,95, textstr, bbox=props)
+
+plt.axvline(x=m, linewidth=1.2, linestyle='solid', color='red', label='Mean')#Linea vertical
+
+std = wbr.rolling(des).std()
+std.plot()
+plt.show()
 
 #%%
 #Describir variables cualitativa/nominal estadisticamente

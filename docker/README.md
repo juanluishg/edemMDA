@@ -71,6 +71,20 @@ Etiquetas:
 
 
 
+### Resumen Funciones 
+
+`docker pull nombre_imagen` -> Descargar imagen
+
+`docker run -itd --name nombre_contenedor -p puerto_externo:puerto_interno nombre_imagen` -> Ejecutar contenedor
+
+`docker exec -it nombre_contenero funcion` -> Ejecutar funcion en el docker
+
+`docker stop id_contenedor` -> Parar ejecucion contenedor
+
+`docker start  id_contenedor` -> Iniciar contenedor ya creado previamente (con docker run)
+
+
+
 ## Ejericios de clase
 
 ### Demo 1

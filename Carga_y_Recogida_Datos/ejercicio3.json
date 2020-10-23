@@ -1,0 +1,27 @@
+{
+  "sampleData":[{
+    "orderNumber": 10107,
+    "quantityOrder": 30,
+    "priceEach": 95.7,
+    "orderLineNumber": 2,
+    "sales": 2871,
+    "orderDate": "2/24/2003 0:00",
+    "status": "Shipped",
+    "qtr_id": 1,
+    "month_id": 2,
+    "year_id": 2003
+  },
+  {
+  "orderNumber": 10121,
+    "quantityOrder": 34,
+    "priceEach": 81.35,
+    "orderLineNumber": 5,
+    "sales": 2765.9,
+    "orderDate": "5/7/2003 0:00",
+    "status": "Shipped",
+    "qtr_id": 2,
+    "month_id": 5,
+    "year_id": 2003
+  }
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+    <car seq="1">
+        <id>1111CXY</id>
+        <model>Opel</model>
+        <color>Red</color>
+        <year>2014</year>
+        <owner>
+            <name>
+                Jacinto Rodriguez
+            </name>
+            <address>
+                Av. Taronjers 10
+            </address>
+            <phone>
+                777777777
+            </phone>
+        </owner>
+    </car>
+    <car seq="2">
+        <id>0000DDD</id>
+        <model>BMW</model>
+        <color>BLue</color>
+        <year>2010</year>
+        <owner>
+            <name>
+                Alicia García
+            </name>
+            <address>
+                C/ Colon 9
+            </address>
+            <phone>
+                111111111
+            </phone>
+        </owner>
+    </car>
+</cars>
