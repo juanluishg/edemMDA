@@ -138,6 +138,8 @@ textstr = 'Mean = ' + str(round(m,1)) + '\nS.D = ' + str(round(des,1)) + '\nn = 
 plt.text(6600,95, textstr, bbox=props)
 
 plt.axvline(x=m, linewidth=1.2, linestyle='solid', color='red', label='Mean')#Linea vertical
+plt.axvline(x=m-des, linewidth=1.2, linestyle='dashed', color='blue', label='-1 S.D')#Linea vertical
+plt.axvline(x=m+des, linewidth=1.2, linestyle='dashed', color='blue', label='+1 S.D')#Linea vertical
 
 std = wbr.rolling(des).std()
 std.plot()

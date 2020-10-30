@@ -17,6 +17,12 @@ import pandas as pd # Libreria de datasets, matrices de datos desde python
 import numpy as np # Operaciones de calculo
 import matplotlib.pyplot as plt # Libreria de gráficos
 
+# Expandir terminal
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
+
 os.getcwd()
 
 # Change working directory
