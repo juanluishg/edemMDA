@@ -1,0 +1,102 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov  5 13:10:59 2020
+
+@author: JuanLu
+"""
+
+
+#Resets ALL (Careful This is a "magic" function then it doesn't run as script) 
+#%reset -f   
+
+#load basiclibraries
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt 
+
+# New libraries
+from pandas.api.types import CategoricalDtype #For definition of custom categorical data types (ordinal if necesary)
+import scipy.stats as stats  # For statistical inference 
+import seaborn as sns  # For hi level, Pandas oriented, graphics
+
+# Expandir terminal
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
+# Get working directory
+os.getcwd()
+
+# Change working directory
+os.chdir("C:/Users/JuanLu/Dropbox/I.Informatica/Master/edemMDA/Programacion")
+os.getcwd()
+
+#Reads data from CSV file and stores it in a dataframe called rentals_2011
+# Pay atention to the specific format of your CSV data (; , or , .)
+wbr = pd.read_csv ("varroas.csv", sep=',', decimal='.')
+print(wbr.shape)
+print(wbr.head())
+print(wbr.info())
+#QC OK
+
+
+#Recode class
+wbr["class_st"] = wbr['class']
+wbr.class_st = wbr.class_st.replace(to_replace=0, value="No Varroa")
+wbr.class_st = wbr.class_st.replace(to_replace=1, value="Varroa")
+#To category
+my_categories=["Varroa", "No Varroa"]
+my_datatype = CategoricalDtype(categories=my_categories, ordered=True)
+wbr["class_cat"] = wbr.class_st.astype(my_datatype)
+wbr.info()
+
+#frequencies
+mytable = pd.crosstab(index=wbr["class_cat"], columns="count") # Crosstab
+n=mytable.sum()
+mytable2 = (mytable/n)*100
+print(mytable2)
+plt.bar(mytable2.index, mytable2['count'])
+plt.xlabel('Varroas')
+plt.title('Figure 1. Percentage of Varroas')
+
+
+#%%
+#Mean Comparison
+wbr['area (px)'].describe()
+
+plt.hist(wbr['area (px)'])
+plt.show()
+
+plt.bar(mytable2.index, mytable2['count'])
+plt.show()
+
+
+#Mean of each group
+wbr.groupby('class_cat')['area (px)'].mean()
+
+wbr.groupby('class_cat')['area (px)'].std()
+
+#t test
+##Extract two groups
+area_v = wbr.loc[wbr.class_cat == 'Varroa', "area (px)"]
+area_nv = wbr.loc[wbr.class_cat == 'No Varroa', "area (px)"]
+
+##Statistical test
+ttest = stats.ttest_ind(area_v, area_nv, equal_var = False)
+
+m = wbr['area (px)'].mean()
+n = wbr['area (px)'].count()
+std = wbr['area (px)'].std()
+
+#Plot the test
+plt.figure(figsize=(5,5))
+ax = sns.pointplot(x="class_cat", y="area (px)", data=wbr, ci=95, join=0)
+plt.ylabel(' ')
+plt.xlabel("Class")
+plt.axhline(y=m, linewidth=1, linestyle='dashed', color="green")
+props = dict(boxstyle='round', facecolor='white', alpha=0.5)
+textstr = 'Mean: ' + str(round(m,1)) + '\nn: ' + str(round(n,0)) + '\nt: ' + str(round(ttest.statistic, 3)) + '\nPValue: ' + str(round(ttest.pvalue, 3))
+plt.text(0.85,0.00000450, textstr, bbox=props)
+plt.title("Figure 1. Average area by Class.")
+plt.show()

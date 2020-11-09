@@ -1,0 +1,25 @@
+1. select first_name, last_name from actor;
+2. select act.first_name, film.title from actor as act inner join  film_actor as fiac on act.actor_id = fiac.actor_id inner join film on fiac.film_id = film.film_id;
+3. select act.first_name, sum(fiac.film_id) from actor as act inner join film_actor as fiac on act.actor_id = fiac.actor_id group by act.actor_id order by sum(fiac.film_id);
+4. select film.title, sum(rental.rental_id) from film inner join inventory as inv on film.film_id = inv.film_id inner join rental on inv.inventory_id = rental.inventory_id group by  film.film_id order by sum(rental.rental_id);
+5. select film.title, sum(pay.amount) from film inner join inventory as inv on film.film_id = inv.film_id inner join rental on inv.inventory_id = rental.inventory_id inner join payment as pay on rental.rental_id = pay.rental_id group by film.film_id order by sum(pay.amount);
+6. select cus.first_name, pay.total_amount
+	from customer as cus 
+	inner join (
+		select customer_id, sum(amount) as total_amount
+		from payment 
+		group by customer_id
+	) as pay
+	on cus.customer_id = pay.customer_id
+	order by pay.total_amount
+	limit 1;
+7. select cus.first_name, rent.total_rentals
+	from customer as cus 
+	inner join (
+		select customer_id, sum(rental_id) as total_rentals
+		from rental 
+		group by customer_id
+	) as rent
+	on cus.customer_id = rent.customer_id
+	order by rent.total_rentals
+	limit 1;
