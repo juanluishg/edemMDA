@@ -100,3 +100,56 @@ textstr = 'Mean: ' + str(round(m,1)) + '\nn: ' + str(round(n,0)) + '\nt: ' + str
 plt.text(0.85,0.00000450, textstr, bbox=props)
 plt.title("Figure 1. Average area by Class.")
 plt.show()
+
+#%% Recode Area
+
+twentyfiveQ = wbr['area (px)'].quantile(0.25)
+midQ = wbr['area (px)'].quantile(0.5)
+seventyfive = wbr['area (px)'].quantile(0.75)
+
+
+wbr.loc[  (wbr['area (px)']<=(twentyfiveQ)) ,"area_str"]= "Small"
+wbr.loc[ ((wbr['area (px)']>(twentyfiveQ)) & (wbr['area (px)']<=(midQ))) ,"area_str"]= "Mid-low"
+wbr.loc[ ((wbr['area (px)']>(midQ)) & (wbr['area (px)']<=(seventyfive))) ,"area_str"]= "Mid-High"
+wbr.loc[  (wbr['area (px)']>(seventyfive)) ,"area_str"]= "High"
+
+my_categories=["Small", "Mid-low", "Mid-High", "High"]
+my_area_type = CategoricalDtype(categories=my_categories, ordered=True)
+wbr["area_cat"] = wbr.area_str.astype(my_area_type)
+wbr.info()
+
+#%%
+#Comparacion de porcentajes
+##CrossTabulation
+pd.crosstab(wbr.area_cat, wbr.class_cat, margins=True)
+
+##Porcentajes de columnas
+my_ct = pd.crosstab(wbr.area_cat, wbr.class_cat, normalize='columns', margins=True)*100
+print(my_ct)
+
+my_ct = round(my_ct, 1) # my_ct.round(1)
+
+
+#Statistical Test
+
+ct = pd.crosstab(wbr.area_cat, wbr.class_cat) #tabla de contingencia solo con las variables, sin total y sin porcentanjes
+
+##Prueba de Chi2
+stats.chi2_contingency(ct) #OJO! leer comentario ct
+#(digito_control, pvalue, etc..)
+
+st = stats.chi2_contingency(ct)
+
+
+# Graphical Representation
+my_ct2 = my_ct.transpose()
+
+my_ct2.plot(kind='bar', edgecolor ='black', colormap='Blues')
+plt.ylim(0,100)
+text = "Chi2: " +  str(round(st[0],2)) + "\nn: " + str(wbr.area_cat.count()) + "\nP-Value: "+ str(round(st[1],2))
+props = dict(boxstyle='round', facecolor='white', alpha=0.5)
+plt.text(0, 80, text, bbox=props)
+plt.xlabel("Varroa")
+plt.ylabel("Area")
+plt.title('Figure 2. Area on pixels depend on if its Varroa or not')
+plt.show()

@@ -108,12 +108,20 @@ ct = pd.crosstab(wbr.cnt_cat, wbr.wd_cat) #tabla de contingencia solo con las va
 stats.chi2_contingency(ct) #OJO! leer comentario ct
 #(digito_control, pvalue, etc..)
 
+st = stats.chi2_contingency(ct)
+
+
 # Graphical Representation
 my_ct2 = my_ct.transpose()
 
 my_ct2.plot(kind='bar', edgecolor ='black', colormap='Blues')
 plt.ylim(0,100)
-plt.title('Figure 2.')
+text = "Chi2: " +  str(round(st[0],2)) + "\nn: " + str(wbr.cnt_cat.count()) + "\nP-Value: "+ str(round(st[1],2))
+props = dict(boxstyle='round', facecolor='white', alpha=0.5)
+plt.text(0, 80, text, bbox=props)
+plt.xlabel("Working Day")
+plt.ylabel("Percentage of rentals")
+plt.title('Figure 2. Number of rentals depend on Working Day')
 plt.show()
 
 
@@ -175,12 +183,13 @@ text = "Chi2: " +  str(round(st[0],2)) + "\nn: " + str(wbr.cnt_cat.count()) + "\
 props = dict(boxstyle='round', facecolor='white', alpha=0.5)
 plt.text(0, 80, text, bbox=props)
 plt.xlabel("Weather Situation")
-plt.ylabel("")
-plt.title('Figure 5. ')
+plt.ylabel("Percentage of rentals")
+plt.title('Figure 5. Number of rentals depend on Weather Situation')
 plt.show()
 
 #%%
 #V de Cramer
+## Mas cerca de 1 mayor relación. 0 ninguna
 def cramers_corrected(confusion_matrix):
     chi2 = stats.chi2_contingency(confusion_matrix)[0]
     n = confusion_matrix.sum().sum()
@@ -191,27 +200,40 @@ def cramers_corrected(confusion_matrix):
     kcorr = k - ((k-1)**2)/(n-1)
     return np.sqrt(phi2corr / min( (kcorr-1), (rcorr-1)))
 
-
+## Test with Weather situation
 #Statistical Test
 
 ct = pd.crosstab(wbr.cnt_cat, wbr.ws_cat) #tabla de contingencia solo con las variables, sin total y sin porcentanjes
 
 # Prueba de V de Cramer
 v = cramers_corrected(ct)
+print("Number of rentals and weather situation")
+print("Cramer's V: " + str(v))
 
+
+## Test with Working Day
+#Statistical Test
+
+ct = pd.crosstab(wbr.cnt_cat, wbr.wd_cat) #tabla de contingencia solo con las variables, sin total y sin porcentanjes
+
+# Prueba de V de Cramer
+v = cramers_corrected(ct)
+print("Number of rentals and working day")
+print("Cramer's V: " + str(v))
 #%%
 # Graficos de mosaicos
 from statsmodels.graphics.mosaicplot import mosaic
 
 mosaic(wbr, ['cnt_cat', 'ws_cat'], title='Figure 6. Mosaic Graph of Number of Rentals and Weather Situation')
 
+mosaic(wbr, ['cnt_cat', 'wd_cat'], title='Figure 6. Mosaic Graph of Number of Rentals and Working Day')
 #%%
 #Guardar entorno
 #!pip install dill
 
-import dill
+#import dill
 
-dill.dump_session("entorno_sesion_8.pkl")
+#dill.dump_session("entorno_sesion_8.pkl")
 
 #Recuperar sesion
-dill.load_session("entorno_sesion_8.pkl")
+#dill.load_session("entorno_sesion_8.pkl")

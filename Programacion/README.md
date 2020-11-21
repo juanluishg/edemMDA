@@ -151,6 +151,38 @@ Grafico de mosaicos
 
 
 
+## Sesión 9
+
+**Archivo Sesion_9.py**
+
+Comparar dos variables cuantitativas
+
+Grafico scatter plot
+
+Prueba de Pearson
+
+Grafico con tres variables (scatter 2 + color)
+
+Leyenda de colores
+
+Guardar grafico
+
+
+
+## Sesión 10
+
+**Archivo Sesion_10.py**
+
+Regresión lineal
+
+Modelo con un variable predictora
+
+Muestra del resumen
+
+Modelo con varias variables predictoras
+
+
+
 ## Ejercicios
 
 ### PlayStore
