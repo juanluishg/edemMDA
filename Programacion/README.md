@@ -183,6 +183,20 @@ Modelo con varias variables predictoras
 
 
 
+## Sesión 11
+
+**Archivo Sesion_10.py**
+
+Modelo con variables nominales
+
+Variables dummies (recodificar variables nominales)
+
+Diccionarios
+
+Hacer el cuadrado de una variable
+
+
+
 ## Ejercicios
 
 ### PlayStore

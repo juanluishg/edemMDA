@@ -68,6 +68,55 @@ print(model4.summary2())
 model5 = ols('cnt ~ temp_celsius + windspeed_kh + hum', data=wbr).fit()
 print(model5.summary2())
 
+
+#With nominal variable
+model6 = ols('cnt ~ workingday', data=wbr).fit()
+print(model6.summary2())
+
+model7 = ols('cnt ~ temp_celsius + windspeed_kh + hum + workingday', data=wbr).fit()
+print(model7.summary2())
+
+model8 = ols('cnt ~ temp_celsius + windspeed_kh + hum + workingday + yr', data=wbr).fit()
+print(model8.summary2())
+
+#%%
+######Dummy Variable / 1 hot encoding
+dummies = pd.get_dummies(wbr.weathersit)
+
+colnames = {1:'sunny', 2:'cloudy', 3:'rainy'} #Diccionario
+
+dummies.rename(columns= colnames, inplace=True)
+
+wbr_dummies = pd.concat([wbr, dummies], axis=1)
+
+pd.crosstab(wbr_dummies.weathersit, wbr_dummies.sunny)
+pd.crosstab(wbr_dummies.weathersit, wbr_dummies.cloudy)
+pd.crosstab(wbr_dummies.weathersit, wbr_dummies.rainy)
+#QC OK
+
+wbr = wbr_dummies
+
+model9 = ols('cnt ~ temp_celsius + windspeed_kh + hum + workingday + yr + rainy + cloudy', data=wbr).fit()
+print(model9.summary2())
+
+
+#Season
+dummies = pd.get_dummies(wbr.season)
+colname = {1:'winter', 2:'spring', 3:'summer', 4:'autum'}
+dummies.rename(columns=colname, inplace=True)
+wbr = pd.concat([wbr,dummies], axis=1)
+
+
+model10 = ols('cnt ~ temp_celsius + windspeed_kh + hum + workingday + yr + rainy + cloudy + spring + summer + autum', data=wbr).fit()
+print(model10.summary2())
+
+
+#Variable Squared
+wbr['temperature_square'] = wbr.temp_celsius * wbr.temp_celsius
+
+model11 = ols('cnt ~ temp_celsius + temperature_square + windspeed_kh + hum + workingday + yr + rainy + cloudy + spring + summer + winter', data=wbr).fit()
+print(model11.summary2())
+
 #%%
 #####Generate Reports#####
 #!pip install stargazer
