@@ -195,6 +195,18 @@ Diccionarios
 
 Hacer el cuadrado de una variable
 
+## Sesión 12
+
+**Presentacion Sesion 14-15**
+**Archivo Sesion_12.py**
+
+Fundamentos de programacion
+
+Bucles for
+
+Control de flujo "if"
+
+Definir funciones
 
 
 ## Ejercicios
