@@ -197,6 +197,18 @@ Hacer el cuadrado de una variable
 
 ## Sesión 12
 
+**Archivo Sesion_11.py**
+
+Revisión de las clases anteriores
+
+Regresión Logítica para predecir variables Dicotomicas
+
+**Archivo False_discovery_rate.py**
+
+Porqué no hacer regresión a lo "bruto"
+
+## Sesión 13
+
 **Presentacion Sesion 14-15**
 **Archivo Sesion_12.py**
 
