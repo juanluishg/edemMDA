@@ -40,7 +40,7 @@ Componetes usados:
 
 <img src="./images/jolt.PNG"/>
 
-`[{
+<code>[{
 	"operation": "modify-overwrite-beta",
 	"spec": {
 		"location": {
@@ -57,7 +57,8 @@ Componetes usados:
 			"longitude": "location.lon"
 		}
 	}
-}]`
+}]
+</code>
 
 * PutElasticsearchHttp
 
@@ -71,7 +72,7 @@ Componetes usados:
 
 **Comprobar los indices**
 
-Dentro de (Kibana)[http://localhost:5601] en Management -> Index Management
+Dentro de [Kibana](http://localhost:5601) en Management -> Index Management
 
 Comprobamos que se ha creado el indice y están los documentos
 
@@ -81,7 +82,8 @@ Para conseguir que "location" sea de tipo "geo_point" hay que crear un nuevo ind
 
 Desde Kibana en DevTools:
 
-`PUT /crimes_re
+<code>
+PUT /crimes_re
 {
   "mappings" : {
     "properties": {
@@ -99,7 +101,8 @@ POST _reindex
   "dest": {
     "index": "crimes_re"
   }
-}`
+}
+</code>
 
 
 
