@@ -40,7 +40,8 @@ Componetes usados:
 
 <img src="./images/jolt.PNG"/>
 
-<code>[{
+```
+[{
 	"operation": "modify-overwrite-beta",
 	"spec": {
 		"location": {
@@ -58,7 +59,7 @@ Componetes usados:
 		}
 	}
 }]
-</code>
+```
 
 * PutElasticsearchHttp
 
@@ -82,7 +83,7 @@ Para conseguir que "location" sea de tipo "geo_point" hay que crear un nuevo ind
 
 Desde Kibana en DevTools:
 
-<code>
+```
 PUT /crimes_re
 {
   "mappings" : {
@@ -102,7 +103,7 @@ POST _reindex
     "index": "crimes_re"
   }
 }
-</code>
+```
 
 
 
