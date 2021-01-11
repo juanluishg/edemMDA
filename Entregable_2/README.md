@@ -125,3 +125,9 @@ Creamos un dashboard y añadimos las visualizaciones
 
 ### Extra
 
+Repetir el proceso anterior.
+
+**Visualizar los datos conjuntos**
+En el apartado Maps de [Kibana](http://localhost:5601) añadimos una capa por cada indice(ciudad).
+
+<img src="./images/mapa.PNG"/>
