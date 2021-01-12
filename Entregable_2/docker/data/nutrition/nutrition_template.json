@@ -1,0 +1,64 @@
+{
+  "template" : "nutrition",
+  "mappings": {
+	  "doc": {
+        "_all": {
+          "enabled": false
+        },
+	  	"properties": {
+	  	  "brand_name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "calories": {
+            "type": "long"
+          },
+          "calories_from_fat": {
+            "type": "float"
+          },
+          "ingredients": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "item_description": {
+            "type": "text"
+          },
+          "item_name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "saturated_fat": {
+            "type": "float"
+          },
+          "serving_size_qty": {
+            "type": "float"
+          },
+          "serving_size_unit": {
+            "type": "keyword"
+          },
+          "servings_per_container": {
+            "type": "float"
+          },
+          "total_fat": {
+            "type": "float"
+          }
+		}  
+	}
+  }
+}
+

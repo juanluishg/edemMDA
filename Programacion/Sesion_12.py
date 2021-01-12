@@ -193,7 +193,7 @@ while(count < 4):
 test_covid = 'negativo'
 if test_covid == 'negativo':
     print("Puede usted salir de casa")
-else test_covid == 'positivo':
+elif test_covid == 'positivo':
     print("Debe quedarse en casa")
     
 #%%

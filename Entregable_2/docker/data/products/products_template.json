@@ -1,0 +1,50 @@
+{
+  "template" : "products",
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 0
+  }, 
+  "mappings": {
+	  "product": {
+        "_all": {
+          "enabled": false
+        },
+		"properties": {
+		  "brandName": {
+			"type": "text",
+			"fields": {
+			  "keyword": {
+				"type": "keyword",
+				"ignore_above": 256
+			  }
+			}
+		  },
+		  "customerRating": {
+			"type": "long"
+		  },
+		  "grp_id": {
+			"type": "keyword"
+		  },
+		  "price": {
+			"type": "float"
+		  },
+		  "productName": {
+			"type": "text",
+			"fields": {
+			  "keyword": {
+				"type": "keyword",
+				"ignore_above": 256
+			  }
+			}
+		  },
+		  "quantitySold": {
+			"type": "long"
+		  },
+		  "upc12": {
+			"type": "keyword"
+		  }
+	    }
+	}
+  }
+}
+
