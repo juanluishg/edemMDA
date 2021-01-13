@@ -65,7 +65,13 @@ Componetes usados:
 
 <img src="./images/elastic.PNG"/>
 
-*url: http://elasticsearch:9200*
+*Elasticsearch URL: http://elasticsearch:9200*
+
+*Index: newyork (nombre del indice)*
+
+*Type: _doc*
+
+*Index Operation: index*
 
 **Resumen Nifi**
 
@@ -75,13 +81,13 @@ Componetes usados:
 
 Dentro de [Kibana](http://localhost:5601) en Management -> Index Management
 
-Comprobamos que se ha creado el indice y están los documentos
+Comprobamos que se ha creado el índice y están los documentos
 
 **Reindexar**
 
-Para conseguir que "location" sea de tipo "geo_point" hay que crear un nuevo indice con este tipo y acumular en este los documentos.
+Para conseguir que "location" sea de tipo "geo_point" hay que crear un nuevo índice con este tipo y acumular en este los documentos.
 
-Desde Kibana en DevTools:
+Desde Kibana -> DevTools:
 
 ```
 PUT /crimes_re
@@ -109,7 +115,7 @@ POST _reindex
 
 **Visualizar los datos**
 
-Desde Kibana en Visualize, creamos uno nuevo (Create new visualization) y seleccionamos Coordinate Map
+Desde Kibana -> Visualize, creamos uno nuevo (Create new visualization) y seleccionamos Coordinate Map
 
 <img src="./images/visualize.PNG"/>
 
@@ -117,7 +123,7 @@ Desde Kibana en Visualize, creamos uno nuevo (Create new visualization) y selecc
 
 **Resultado final**
 
-Creamos un dashboard y añadimos las visualizaciones
+Desde Kibana -> Dashborard, creamos un dashboard (Create new dashboard) y añadimos las visualizaciones
 
 <img src="./images/dashboard.PNG"/>
 
@@ -128,6 +134,13 @@ Creamos un dashboard y añadimos las visualizaciones
 Repetir el proceso anterior.
 
 **Visualizar los datos conjuntos**
-En el apartado Maps de [Kibana](http://localhost:5601) añadimos una capa por cada indice(ciudad).
+
+En el apartado Maps de [Kibana](http://localhost:5601) creamos un nuevo mapa y añadimos una capa por cada indice(ciudad).
+
+Pulsamos sobre "Add Layer" y como fuente seleccionamos "Documents", seleccionamos el índice que queramos añadir y por ultimo pulsamos en Add layer.
+
+Repetimos este paso por cada índice(ciudad) que queramos añadir.
+
+Por últimos, pulsamos en "Save" antes de salir
 
 <img src="./images/maps.PNG"/>
