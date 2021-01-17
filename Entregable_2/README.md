@@ -65,26 +65,26 @@ Componetes usados:
 
 <img src="./images/elastic.PNG"/>
 
-*url: http://elasticsearch:9200*
+*Elasticsearch URL: http://elasticsearch:9200*
+
+*Index: newyork (nombre del indice)*
+
+*Type: _doc*
+
+*Index Operation: index*
 
 **Resumen Nifi**
 
 <img src="./images/nifi.PNG"/>
 
-**Comprobar los indices**
+**Mapping**
 
-Dentro de [Kibana](http://localhost:5601) en Management -> Index Management
+Para conseguir que "location" sea de tipo "geo_point" hay que crear un nuevo índice con este tipo y acumular en este los documentos.
 
-Comprobamos que se ha creado el indice y están los documentos
-
-**Reindexar**
-
-Para conseguir que "location" sea de tipo "geo_point" hay que crear un nuevo indice con este tipo y acumular en este los documentos.
-
-Desde Kibana en DevTools:
+Desde Kibana -> DevTools:
 
 ```
-PUT /crimes_re
+PUT /chicago
 {
   "mappings" : {
     "properties": {
@@ -94,22 +94,43 @@ PUT /crimes_re
     }
   }
 }
-POST _reindex
+PUT /newyork
 {
-  "source": {
-    "index": "crimes"
-  },
-  "dest": {
-    "index": "crimes_re"
+  "mappings" : {
+    "properties": {
+      "location": {
+        "type": "geo_point"
+      }
+    }
   }
 }
 ```
 
+**Cargar los datos**
 
+Una vez realizado el paso anterior (crear los índices con el mapping location de tipo geo_point), iniciamos el flow de Nifi.
+
+Esperamos unos minutos (tarda unos 5 minutos en acumular los documentos)
+
+**Crear los Index Patterns**
+
+Una vez estén todos los documentos (Kibana -> Management -> Index Management), tenemos que crear los Index Patterns para poder hacer las visualizaciones de los datos en Kibana.
+
+Para ello vamos a Kibana -> Management -> Index Patterns y pulsamos sobre "Create index pattern".
+
+Introducimos el nombre del índice (o parte de él) y pulsamos en "Next step"
+
+<img src="./images/create_index_pattern.PNG"/>
+
+Escogemos que atributo de los datos vamos a utilizar como timestamp(time filter). En nuestro caso creo que el mas representativo es el "created_date".
+
+<img src="./images/time.PNG"/>
+
+Y por último pulsamos en "Create index pattern"
 
 **Visualizar los datos**
 
-Desde Kibana en Visualize, creamos uno nuevo (Create new visualization) y seleccionamos Coordinate Map
+Desde Kibana -> Visualize, creamos uno nuevo (Create new visualization) y seleccionamos Coordinate Map
 
 <img src="./images/visualize.PNG"/>
 
@@ -117,7 +138,7 @@ Desde Kibana en Visualize, creamos uno nuevo (Create new visualization) y selecc
 
 **Resultado final**
 
-Creamos un dashboard y añadimos las visualizaciones
+Desde Kibana -> Dashborard, creamos un dashboard (Create new dashboard) y añadimos las visualizaciones
 
 <img src="./images/dashboard.PNG"/>
 
@@ -128,6 +149,27 @@ Creamos un dashboard y añadimos las visualizaciones
 Repetir el proceso anterior.
 
 **Visualizar los datos conjuntos**
-En el apartado Maps de [Kibana](http://localhost:5601) añadimos una capa por cada indice(ciudad).
+
+En el apartado Maps de [Kibana](http://localhost:5601) creamos un nuevo mapa y añadimos una capa por cada indice(ciudad).
+
+Pulsamos sobre "Add Layer" y como fuente seleccionamos "Documents", seleccionamos el índice que queramos añadir y por ultimo pulsamos en Add layer.
+
+Repetimos este paso por cada índice(ciudad) que queramos añadir.
+
+Por últimos, pulsamos en "Save" antes de salir
 
 <img src="./images/maps.PNG"/>
+
+### Conclusiones
+
+El índice que se crea manual desde el Dev Tools solo hay que crearlo la primera vez, ya que realmente lo que creamos es el mapping, es decir, el esquema de los datos. Luego el proceso es completamente automático.
+
+
+
+### Anexos
+
+`docker/docker-compose.yml` -> Fichero docker compose para levantar los contenedores necesarios
+
+`Nifi+ELK.json` -> Flow de Nifi con todos los procesadores ya configurados (listo para iniciar)
+
+`Nifi+ELK.xml` -> Plantilla para importar en Nifi, con el flow descrito en este documento.

@@ -6,9 +6,29 @@ Repositorio del Master de Data Analytics de la Escuela de Empresarios de Valenci
 
 **Curso 2020/2021** 
 
-1. [Docker](https://github.com/juanluishg/edemMDA/tree/master/docker)
-2. [Tratamiento del Dato](https://github.com/juanluishg/edemMDA/tree/master/Tratamiento_del_Dato)
-3. [Programación Estadística con Python](https://github.com/juanluishg/edemMDA/tree/master/Programacion)
+- [Calidad del Dato](https://github.com/juanluishg/edemMDA/tree/master/Calidad_De_Datos)
+
+- [Carga y Recogida del Dato](https://github.com/juanluishg/edemMDA/tree/master/Carga_y_Recogida_Datos)
+
+- [Docker](https://github.com/juanluishg/edemMDA/tree/master/docker)
+
+- [Entregable 1](https://github.com/juanluishg/edemMDA/tree/master/Tratamiento_del_Dato/Entregable_1)
+
+- [Entregable 2](https://github.com/juanluishg/edemMDA/tree/master/Entregable_2)
+
+- [Ingestión del Dato](https://github.com/juanluishg/edemMDA/tree/master/Ingestion_De_Datos): Templates y Flows de Nifi
+
+- [Preparación del Dato](https://github.com/juanluishg/edemMDA/tree/master/Preparacion_De_Datos)
+
+- [Programación Estadística con Python](https://github.com/juanluishg/edemMDA/tree/master/Programacion)
+
+- [Tratamiento del Dato](https://github.com/juanluishg/edemMDA/tree/master/Tratamiento_del_Dato)
+
+
+
+### Dataprojects
+
+- [Dataproject 1](https://github.com/juanluishg/dataproject1)
 
 
 Juan Luis Hernández García
