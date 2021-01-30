@@ -23,6 +23,10 @@ Repositorio del Master de Data Analytics de la Escuela de Empresarios de Valenci
 - [Programación Estadística con Python](https://github.com/juanluishg/edemMDA/tree/master/Programacion)
 
 - [Tratamiento del Dato](https://github.com/juanluishg/edemMDA/tree/master/Tratamiento_del_Dato)
+    * Spark
+    * Apache Zeppeling
+    * NOSQL - Cassandra
+
 
 
 
