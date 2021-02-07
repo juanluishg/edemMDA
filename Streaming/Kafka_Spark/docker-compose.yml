@@ -6,80 +6,80 @@ services:
     container_name: nifi
     restart: always
     ports:
-    - '8080:8080'
+      - '8080:8080'
   nifi-registry:
     image: 'apache/nifi-registry:latest'
     container_name: nifiregistry
     restart: always
     ports:
-            - '18080:18080'
+      - '18080:18080'
    # Jupyter: Notebook Analytics
   jupyter:
-    image: 'jupyter/pyspark-notebook'
+    build: 'jupyter/' 
     hostname: jupyterPySpark
     container_name: jupyterPySpark
     user: root
     environment:
       - JUPYTER_TOKEN=edem
     volumes: 
-      - C:\Users\juanl\Dropbox\I.Informatica\Master\edemMDA\Streaming\Kafka_Spark\:/home/jovyan/
+      - D:\Master\edemMDA\Streaming\Kafka_Spark\:/home/jovyan/
     ports:
       - '8888:8888'
       - "4040:4040"
 
-  zookeeper:
+  zookeeper_kafka:
     image: confluentinc/cp-zookeeper:5.4.0
     hostname: zookeeper
-    container_name: zookeeper
+    container_name: zookeeper_kafka
     ports:
-      - "2181:2181"
+      - "12181:12181"
     environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_CLIENT_PORT: 12181
       ZOOKEEPER_TICK_TIME: 2000
 
-  broker:
+  broker_kafka:
     image: confluentinc/cp-kafka:5.4.0
     hostname: broker
-    container_name: broker
+    container_name: broker_kafka
     depends_on:
-      - zookeeper
+      - zookeeper_kafka
     ports:
       - "29092:29092"
       - "9092:9092"
     environment:
       KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:12181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
 
-  schema-registry:
+  schema-registry_kafka:
     image: confluentinc/cp-schema-registry:5.4.0
     hostname: schema-registry
-    container_name: schema-registry
+    container_name: schema-registry_kafka
     depends_on:
-      - zookeeper
-      - broker
+      - zookeeper_kafka
+      - broker_kafka
     ports:
       - "8082:8081"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
-      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: 'zookeeper:2181'
+      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: 'zookeeper:12181'
 
-  control-center:
+  control-center_kafka:
     image: confluentinc/cp-enterprise-control-center:5.4.0
     hostname: control-center
-    container_name: control-center
+    container_name: control-center_kafka
     depends_on:
-      - zookeeper
-      - broker
-      - schema-registry
+      - zookeeper_kafka
+      - broker_kafka
+      - schema-registry_kafka
     ports:
       - "9021:9021"
     environment:
       CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker:29092'
-      CONTROL_CENTER_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      CONTROL_CENTER_ZOOKEEPER_CONNECT: 'zookeeper:12181'
       CONTROL_CENTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
       CONTROL_CENTER_REPLICATION_FACTOR: 1
       CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
