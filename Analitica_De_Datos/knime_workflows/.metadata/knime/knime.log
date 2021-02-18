@@ -1,0 +1,53 @@
+2021-02-18 19:19:05,605 : WARN  : main :  : Node : String Manipulation : 3:2 : No expression has been set.
+2021-02-18 19:21:10,281 : WARN  : KNIME-Worker-4-Statistics 3:3 :  : Node : Statistics : 3:3 : Maximum number of unique possible values (1000) exceeds for column(s): "name"
+2021-02-18 19:40:03,331 : WARN  : main :  : Node : Partitioning : 3:10 : No sampling method selected
+2021-02-18 19:40:36,089 : WARN  : main :  : Node : Random Forest Learner : 3:11 : No configuration available
+2021-02-18 19:41:11,621 : WARN  : main :  : Node : Random Forest Learner : 3:11 : 3 column(s) were ignored due to missing domain information: ["pclass", "sibsp", "parch"] -- change the node configuration or use a Domain Calculator node to fix it
+2021-02-18 19:41:11,631 : WARN  : main :  : Node : Scorer : 3:13 : No columns selected yet.
+2021-02-18 19:41:24,532 : WARN  : main :  : Node : Scorer : 3:13 : No columns selected yet.
+2021-02-18 19:41:31,707 : WARN  : main :  : WrappedNodeDialog : Scorer : 3:13 : failed to apply settings: First and second column cannot be the same.
+org.knime.core.node.InvalidSettingsException: First and second column cannot be the same.
+	at org.knime.base.node.mine.scorer.accuracy.AccuracyScorer2NodeDialog.saveSettingsTo(AccuracyScorer2NodeDialog.java:349)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:532)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:766)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2021-02-18 19:41:54,700 : WARN  : main :  : Node : Random Forest Learner : 3:11 : 3 column(s) were ignored due to missing domain information: ["pclass", "sibsp", "parch"] -- change the node configuration or use a Domain Calculator node to fix it
+2021-02-18 19:41:58,789 : WARN  : main :  : Node : Random Forest Learner : 3:11 : 3 column(s) were ignored due to missing domain information: ["pclass", "sibsp", "parch"] -- change the node configuration or use a Domain Calculator node to fix it
+2021-02-18 19:42:00,409 : WARN  : KNIME-Worker-15-Missing Value 3:8 :  : Node : Missing Value : 3:8 : Column "agerange" still contains missing values.
+2021-02-18 19:42:33,924 : WARN  : main :  : Node : Random Forest Learner : 3:11 : 3 column(s) were ignored due to missing domain information: ["pclass", "sibsp", "parch"] -- change the node configuration or use a Domain Calculator node to fix it
+2021-02-18 20:32:14,511 : WARN  : main :  : ExplorerFileSystemUtils :  :  : At least one of the workflows affected by the operation is still open in the editor and has to be closed first.
+2021-02-18 20:32:15,692 : WARN  : main :  : LocalWorkspaceContentProvider :  :  : At least one of the workflows affected by the operation is still open in the editor and has to be closed first.
+2021-02-18 20:33:17,406 : WARN  : main :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:33:40,432 : WARN  : main :  : ExplorerFileSystemUtils :  :  : At least one of the workflows affected by the operation is still open in the editor and has to be closed first.
+2021-02-18 20:33:41,506 : WARN  : main :  : LocalWorkspaceContentProvider :  :  : At least one of the workflows affected by the operation is still open in the editor and has to be closed first.
+2021-02-18 20:33:55,815 : WARN  : KNIME-Worker-25-CSV Reader 4:1 :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:35:43,448 : WARN  : main :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:36:38,734 : WARN  : KNIME-Worker-26-Statistics 4:9 :  : Node : Statistics : 4:9 : Maximum number of unique possible values (1000) exceeds for column(s): "CUST_ID"
+2021-02-18 20:38:34,875 : WARN  : main :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:39:10,971 : WARN  : main :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:39:23,115 : WARN  : main :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:39:34,345 : WARN  : main :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:39:57,724 : WARN  : KNIME-Worker-39-k-Means 4:2 :  : Node : Color Manager : 4:3 : Column "class" not found.
+2021-02-18 20:40:46,372 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: too many/missing nominal values.
+2021-02-18 20:40:50,142 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: too many/missing nominal values.
+2021-02-18 20:41:30,273 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: bounds missing.
+2021-02-18 20:41:38,557 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: bounds missing.
+2021-02-18 20:41:44,089 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: bounds missing.
+2021-02-18 20:41:47,929 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: bounds missing.
+2021-02-18 20:41:51,555 : WARN  : KNIME-Worker-48-Scatter Plot (local) 4:5 :  : Node : Scatter Plot (local) : 4:5 : Only the first 2500 rows are displayed.
+2021-02-18 20:42:42,602 : WARN  : KNIME-Worker-43-Scatter Plot (local) 4:5 :  : Node : Scatter Plot (local) : 4:5 : Only the first 2500 rows are displayed.

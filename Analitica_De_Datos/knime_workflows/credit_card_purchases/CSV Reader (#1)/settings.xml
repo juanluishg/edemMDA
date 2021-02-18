@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+<entry key="node_file" type="xstring" value="settings.xml"/>
+<config key="flow_stack"/>
+<config key="internal_node_subsettings">
+<entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+</config>
+<config key="model">
+<config key="settings">
+<config key="file_selection_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_ReaderFileChooser"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<config key="file_selection">
+<config key="file_system_chooser__Internals">
+<entry key="has_fs_port" type="xboolean" value="false"/>
+<entry key="overwritten_by_variable" type="xboolean" value="false"/>
+<entry key="convenience_fs_category" type="xstring" value="CUSTOM_URL"/>
+<entry key="relative_to" type="xstring" value="knime.workflow.data"/>
+<entry key="mountpoint" type="xstring" value="knime-temp-space"/>
+<entry key="custom_url_timeout" type="xint" value="1000"/>
+<entry key="connected_fs" type="xboolean" value="true"/>
+</config>
+<config key="path">
+<entry key="location_present" type="xboolean" value="true"/>
+<entry key="file_system_type" type="xstring" value="CUSTOM_URL"/>
+<entry key="file_system_specifier" type="xstring" value="1000"/>
+<entry key="path" type="xstring" value="file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/CC%20GENERAL.csv"/>
+</config>
+<config key="filter_mode_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_FilterMode"/>
+<entry key="EnabledStatus" type="xboolean" value="false"/>
+</config>
+<config key="filter_mode">
+<entry key="filter_mode" type="xstring" value="FILE"/>
+<entry key="include_subfolders" type="xboolean" value="false"/>
+<config key="filter_options">
+<entry key="filter_files_extension" type="xboolean" value="false"/>
+<entry key="files_extension_expression" type="xstring" value=""/>
+<entry key="files_extension_case_sensitive" type="xboolean" value="false"/>
+<entry key="filter_files_name" type="xboolean" value="false"/>
+<entry key="files_name_expression" type="xstring" value="*"/>
+<entry key="files_name_case_sensitive" type="xboolean" value="false"/>
+<entry key="files_name_filter_type" type="xstring" value="WILDCARD"/>
+<entry key="include_hidden_files" type="xboolean" value="false"/>
+<entry key="filter_folders_name" type="xboolean" value="false"/>
+<entry key="folders_name_expression" type="xstring" value="*"/>
+<entry key="folders_name_case_sensitive" type="xboolean" value="false"/>
+<entry key="folders_name_filter_type" type="xstring" value="WILDCARD"/>
+<entry key="include_hidden_folders" type="xboolean" value="false"/>
+</config>
+</config>
+</config>
+<entry key="has_column_header" type="xboolean" value="true"/>
+<entry key="has_row_id" type="xboolean" value="true"/>
+<entry key="support_short_data_rows" type="xboolean" value="false"/>
+<entry key="skip_empty_data_rows" type="xboolean" value="false"/>
+<entry key="prepend_file_idx_to_row_id" type="xboolean" value="false"/>
+<entry key="comment_char" type="xstring" value="#"/>
+<entry key="column_delimiter" type="xstring" value=","/>
+<entry key="quote_char" type="xstring" value="&quot;"/>
+<entry key="quote_escape_char" type="xstring" value="&quot;"/>
+<entry key="row_delimiter" type="xstring" value="%%00013%%00010"/>
+<entry key="autodetect_buffer_size" type="xint" value="1048576"/>
+</config>
+<config key="table_spec_config_Internals">
+<entry key="root_path_Internals" type="xstring" value="file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/CC%20GENERAL.csv"/>
+<config key="datatable_spec_Internals">
+<entry key="spec_name" type="xstring" value="default"/>
+<entry key="number_columns" type="xint" value="17"/>
+<config key="column_spec_0">
+<entry key="column_name" type="xstring" value="BALANCE"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_1">
+<entry key="column_name" type="xstring" value="BALANCE_FREQUENCY"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_2">
+<entry key="column_name" type="xstring" value="PURCHASES"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_3">
+<entry key="column_name" type="xstring" value="ONEOFF_PURCHASES"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_4">
+<entry key="column_name" type="xstring" value="INSTALLMENTS_PURCHASES"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_5">
+<entry key="column_name" type="xstring" value="CASH_ADVANCE"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_6">
+<entry key="column_name" type="xstring" value="PURCHASES_FREQUENCY"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_7">
+<entry key="column_name" type="xstring" value="ONEOFF_PURCHASES_FREQUENCY"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_8">
+<entry key="column_name" type="xstring" value="PURCHASES_INSTALLMENTS_FREQUENCY"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_9">
+<entry key="column_name" type="xstring" value="CASH_ADVANCE_FREQUENCY"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_10">
+<entry key="column_name" type="xstring" value="CASH_ADVANCE_TRX"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_11">
+<entry key="column_name" type="xstring" value="PURCHASES_TRX"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_12">
+<entry key="column_name" type="xstring" value="CREDIT_LIMIT"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_13">
+<entry key="column_name" type="xstring" value="PAYMENTS"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_14">
+<entry key="column_name" type="xstring" value="MINIMUM_PAYMENTS"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_15">
+<entry key="column_name" type="xstring" value="PRC_FULL_PAYMENT"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.DoubleCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+<config key="column_spec_16">
+<entry key="column_name" type="xstring" value="TENURE"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+</config>
+<config key="column_domain"/>
+<config key="column_properties"/>
+<config key="meta_data"/>
+</config>
+</config>
+<config key="file_paths_Internals">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="/D:/Master/edemMDA/Analitica_De_Datos/datasets/CC GENERAL.csv"/>
+</config>
+<config key="individual_specs_Internals">
+<config key="individual_spec_0">
+<entry key="array-size" type="xint" value="17"/>
+<entry key="0" type="xstring" value="BALANCE"/>
+<entry key="1" type="xstring" value="BALANCE_FREQUENCY"/>
+<entry key="2" type="xstring" value="PURCHASES"/>
+<entry key="3" type="xstring" value="ONEOFF_PURCHASES"/>
+<entry key="4" type="xstring" value="INSTALLMENTS_PURCHASES"/>
+<entry key="5" type="xstring" value="CASH_ADVANCE"/>
+<entry key="6" type="xstring" value="PURCHASES_FREQUENCY"/>
+<entry key="7" type="xstring" value="ONEOFF_PURCHASES_FREQUENCY"/>
+<entry key="8" type="xstring" value="PURCHASES_INSTALLMENTS_FREQUENCY"/>
+<entry key="9" type="xstring" value="CASH_ADVANCE_FREQUENCY"/>
+<entry key="10" type="xstring" value="CASH_ADVANCE_TRX"/>
+<entry key="11" type="xstring" value="PURCHASES_TRX"/>
+<entry key="12" type="xstring" value="CREDIT_LIMIT"/>
+<entry key="13" type="xstring" value="PAYMENTS"/>
+<entry key="14" type="xstring" value="MINIMUM_PAYMENTS"/>
+<entry key="15" type="xstring" value="PRC_FULL_PAYMENT"/>
+<entry key="16" type="xstring" value="TENURE"/>
+</config>
+</config>
+<config key="production_paths_Internals">
+<entry key="production_path_0_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_0_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_0_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_0_converter_name" type="xstring" value="Double"/>
+<config key="production_path_0_converter_config"/>
+<entry key="production_path_0_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_0_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_0_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_0_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_0_producer_config"/>
+<entry key="production_path_1_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_1_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_1_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_1_converter_name" type="xstring" value="Double"/>
+<config key="production_path_1_converter_config"/>
+<entry key="production_path_1_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_1_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_1_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_1_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_1_producer_config"/>
+<entry key="production_path_2_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_2_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_2_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_2_converter_name" type="xstring" value="Double"/>
+<config key="production_path_2_converter_config"/>
+<entry key="production_path_2_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_2_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_2_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_2_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_2_producer_config"/>
+<entry key="production_path_3_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_3_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_3_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_3_converter_name" type="xstring" value="Double"/>
+<config key="production_path_3_converter_config"/>
+<entry key="production_path_3_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_3_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_3_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_3_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_3_producer_config"/>
+<entry key="production_path_4_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_4_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_4_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_4_converter_name" type="xstring" value="Double"/>
+<config key="production_path_4_converter_config"/>
+<entry key="production_path_4_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_4_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_4_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_4_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_4_producer_config"/>
+<entry key="production_path_5_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_5_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_5_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_5_converter_name" type="xstring" value="Double"/>
+<config key="production_path_5_converter_config"/>
+<entry key="production_path_5_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_5_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_5_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_5_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_5_producer_config"/>
+<entry key="production_path_6_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_6_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_6_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_6_converter_name" type="xstring" value="Double"/>
+<config key="production_path_6_converter_config"/>
+<entry key="production_path_6_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_6_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_6_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_6_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_6_producer_config"/>
+<entry key="production_path_7_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_7_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_7_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_7_converter_name" type="xstring" value="Double"/>
+<config key="production_path_7_converter_config"/>
+<entry key="production_path_7_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_7_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_7_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_7_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_7_producer_config"/>
+<entry key="production_path_8_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_8_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_8_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_8_converter_name" type="xstring" value="Double"/>
+<config key="production_path_8_converter_config"/>
+<entry key="production_path_8_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_8_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_8_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_8_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_8_producer_config"/>
+<entry key="production_path_9_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_9_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_9_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_9_converter_name" type="xstring" value="Double"/>
+<config key="production_path_9_converter_config"/>
+<entry key="production_path_9_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_9_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_9_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_9_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_9_producer_config"/>
+<entry key="production_path_10_converter" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+<entry key="production_path_10_converter_src" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_10_converter_dst" type="xstring" value="Number (integer)"/>
+<entry key="production_path_10_converter_name" type="xstring" value="Integer"/>
+<config key="production_path_10_converter_config"/>
+<entry key="production_path_10_producer" type="xstring" value="class java.lang.Integer-&gt;java.lang.Integer"/>
+<entry key="production_path_10_producer_src" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_10_producer_dst" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_10_producer_name" type="xstring" value="java.lang.Integer"/>
+<config key="production_path_10_producer_config"/>
+<entry key="production_path_11_converter" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+<entry key="production_path_11_converter_src" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_11_converter_dst" type="xstring" value="Number (integer)"/>
+<entry key="production_path_11_converter_name" type="xstring" value="Integer"/>
+<config key="production_path_11_converter_config"/>
+<entry key="production_path_11_producer" type="xstring" value="class java.lang.Integer-&gt;java.lang.Integer"/>
+<entry key="production_path_11_producer_src" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_11_producer_dst" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_11_producer_name" type="xstring" value="java.lang.Integer"/>
+<config key="production_path_11_producer_config"/>
+<entry key="production_path_12_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_12_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_12_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_12_converter_name" type="xstring" value="Double"/>
+<config key="production_path_12_converter_config"/>
+<entry key="production_path_12_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_12_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_12_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_12_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_12_producer_config"/>
+<entry key="production_path_13_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_13_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_13_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_13_converter_name" type="xstring" value="Double"/>
+<config key="production_path_13_converter_config"/>
+<entry key="production_path_13_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_13_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_13_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_13_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_13_producer_config"/>
+<entry key="production_path_14_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_14_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_14_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_14_converter_name" type="xstring" value="Double"/>
+<config key="production_path_14_converter_config"/>
+<entry key="production_path_14_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_14_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_14_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_14_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_14_producer_config"/>
+<entry key="production_path_15_converter" type="xstring" value="org.knime.core.data.def.DoubleCell$DoubleCellFactory.create(class java.lang.Double)"/>
+<entry key="production_path_15_converter_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_15_converter_dst" type="xstring" value="Number (double)"/>
+<entry key="production_path_15_converter_name" type="xstring" value="Double"/>
+<config key="production_path_15_converter_config"/>
+<entry key="production_path_15_producer" type="xstring" value="class java.lang.Double-&gt;java.lang.Double"/>
+<entry key="production_path_15_producer_src" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_15_producer_dst" type="xstring" value="java.lang.Double"/>
+<entry key="production_path_15_producer_name" type="xstring" value="java.lang.Double"/>
+<config key="production_path_15_producer_config"/>
+<entry key="production_path_16_converter" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+<entry key="production_path_16_converter_src" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_16_converter_dst" type="xstring" value="Number (integer)"/>
+<entry key="production_path_16_converter_name" type="xstring" value="Integer"/>
+<config key="production_path_16_converter_config"/>
+<entry key="production_path_16_producer" type="xstring" value="class java.lang.Integer-&gt;java.lang.Integer"/>
+<entry key="production_path_16_producer_src" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_16_producer_dst" type="xstring" value="java.lang.Integer"/>
+<entry key="production_path_16_producer_name" type="xstring" value="java.lang.Integer"/>
+<config key="production_path_16_producer_config"/>
+<entry key="num_production_paths_Internals" type="xint" value="17"/>
+</config>
+<config key="original_names_Internals">
+<entry key="array-size" type="xint" value="17"/>
+<entry key="0" type="xstring" value="BALANCE"/>
+<entry key="1" type="xstring" value="BALANCE_FREQUENCY"/>
+<entry key="2" type="xstring" value="PURCHASES"/>
+<entry key="3" type="xstring" value="ONEOFF_PURCHASES"/>
+<entry key="4" type="xstring" value="INSTALLMENTS_PURCHASES"/>
+<entry key="5" type="xstring" value="CASH_ADVANCE"/>
+<entry key="6" type="xstring" value="PURCHASES_FREQUENCY"/>
+<entry key="7" type="xstring" value="ONEOFF_PURCHASES_FREQUENCY"/>
+<entry key="8" type="xstring" value="PURCHASES_INSTALLMENTS_FREQUENCY"/>
+<entry key="9" type="xstring" value="CASH_ADVANCE_FREQUENCY"/>
+<entry key="10" type="xstring" value="CASH_ADVANCE_TRX"/>
+<entry key="11" type="xstring" value="PURCHASES_TRX"/>
+<entry key="12" type="xstring" value="CREDIT_LIMIT"/>
+<entry key="13" type="xstring" value="PAYMENTS"/>
+<entry key="14" type="xstring" value="MINIMUM_PAYMENTS"/>
+<entry key="15" type="xstring" value="PRC_FULL_PAYMENT"/>
+<entry key="16" type="xstring" value="TENURE"/>
+</config>
+<config key="positional_mapping_Internals">
+<entry key="array-size" type="xint" value="17"/>
+<entry key="0" type="xint" value="0"/>
+<entry key="1" type="xint" value="1"/>
+<entry key="2" type="xint" value="2"/>
+<entry key="3" type="xint" value="3"/>
+<entry key="4" type="xint" value="4"/>
+<entry key="5" type="xint" value="5"/>
+<entry key="6" type="xint" value="6"/>
+<entry key="7" type="xint" value="7"/>
+<entry key="8" type="xint" value="8"/>
+<entry key="9" type="xint" value="9"/>
+<entry key="10" type="xint" value="10"/>
+<entry key="11" type="xint" value="11"/>
+<entry key="12" type="xint" value="12"/>
+<entry key="13" type="xint" value="13"/>
+<entry key="14" type="xint" value="14"/>
+<entry key="15" type="xint" value="15"/>
+<entry key="16" type="xint" value="16"/>
+</config>
+<config key="keep_Internals">
+<entry key="array-size" type="xint" value="17"/>
+<entry key="0" type="xboolean" value="true"/>
+<entry key="1" type="xboolean" value="true"/>
+<entry key="2" type="xboolean" value="true"/>
+<entry key="3" type="xboolean" value="true"/>
+<entry key="4" type="xboolean" value="true"/>
+<entry key="5" type="xboolean" value="true"/>
+<entry key="6" type="xboolean" value="true"/>
+<entry key="7" type="xboolean" value="true"/>
+<entry key="8" type="xboolean" value="true"/>
+<entry key="9" type="xboolean" value="true"/>
+<entry key="10" type="xboolean" value="true"/>
+<entry key="11" type="xboolean" value="true"/>
+<entry key="12" type="xboolean" value="true"/>
+<entry key="13" type="xboolean" value="true"/>
+<entry key="14" type="xboolean" value="true"/>
+<entry key="15" type="xboolean" value="true"/>
+<entry key="16" type="xboolean" value="true"/>
+</config>
+<entry key="unknown_column_position_Internals" type="xint" value="17"/>
+<entry key="include_unknown_columns_Internals" type="xboolean" value="true"/>
+<entry key="enforce_types" type="xboolean" value="true"/>
+<entry key="column_filter_mode_Internals" type="xstring" value="UNION"/>
+</config>
+<config key="advanced_settings">
+<entry key="spec_merge_mode_Internals" type="xstring" value="UNION"/>
+<entry key="fail_on_differing_specs" type="xboolean" value="true"/>
+<entry key="limit_data_rows_scanned" type="xboolean" value="true"/>
+<entry key="max_data_rows_scanned" type="xlong" value="10000"/>
+<entry key="save_table_spec_config_Internals" type="xboolean" value="true"/>
+<entry key="limit_memory_per_column" type="xboolean" value="true"/>
+<entry key="maximum_number_of_columns" type="xint" value="8192"/>
+<entry key="quote_option" type="xstring" value="REMOVE_QUOTES_AND_TRIM"/>
+<entry key="replace_empty_quotes_with_missing" type="xboolean" value="true"/>
+<entry key="thousands_separator" type="xstring" value="%%00000"/>
+<entry key="decimal_separator" type="xstring" value="."/>
+</config>
+<config key="limit_rows">
+<entry key="skip_lines" type="xboolean" value="false"/>
+<entry key="number_of_lines_to_skip" type="xlong" value="1"/>
+<entry key="skip_data_rows" type="xboolean" value="false"/>
+<entry key="number_of_rows_to_skip" type="xlong" value="1"/>
+<entry key="limit_data_rows" type="xboolean" value="false"/>
+<entry key="max_rows" type="xlong" value="50"/>
+</config>
+<config key="encoding">
+<entry key="charset" type="xstring" isnull="true" value=""/>
+</config>
+</config>
+<entry key="customDescription" type="xstring" isnull="true" value=""/>
+<entry key="state" type="xstring" value="EXECUTED"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.io.filehandling.csv.reader.CSVTableReaderNodeFactory"/>
+<entry key="node-name" type="xstring" value="CSV Reader"/>
+<entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
+<entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
+<entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-bundle-version" type="xstring" value="4.3.1.v202101261649"/>
+<entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
+<entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+<entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-feature-version" type="xstring" value="4.3.1.v202101261649"/>
+<config key="factory_settings"/>
+<config key="node_creation_config">
+<config key="File System Connection"/>
+<config key="Data Table"/>
+</config>
+<entry key="name" type="xstring" value="CSV Reader"/>
+<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="isInactive" type="xboolean" value="false"/>
+<config key="ports">
+<config key="port_1">
+<entry key="index" type="xint" value="1"/>
+<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 8950, Cols: 17"/>
+<entry key="port_dir_location" type="xstring" value="port_1"/>
+</config>
+</config>
+<config key="filestores">
+<entry key="file_store_location" type="xstring" isnull="true" value=""/>
+<entry key="file_store_id" type="xstring" value="60f3dab1-8ce8-4911-8038-0456c4ca486a"/>
+</config>
+</config>
