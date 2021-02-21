@@ -1,1 +1,5 @@
+file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/breastcancer.csv
+knime://knime.workflow/../../../TheData/Customers/ContractData.csv
 knime://knime.workflow/data.all
+D:\Master\edemMDA\Analitica_De_Datos\datasets\breastcancer.csv
+file:/Users/joseluisperisadsuara/Documents/DATA%202.0/CLASES/FEBRERO/19%20VIERNES%204H/breastcancer.csv

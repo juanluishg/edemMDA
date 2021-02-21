@@ -51,3 +51,271 @@ org.knime.core.node.InvalidSettingsException: First and second column cannot be 
 2021-02-18 20:41:47,929 : WARN  : main :  : Node : Scatter Plot (local) : 4:5 : Some columns are ignored: bounds missing.
 2021-02-18 20:41:51,555 : WARN  : KNIME-Worker-48-Scatter Plot (local) 4:5 :  : Node : Scatter Plot (local) : 4:5 : Only the first 2500 rows are displayed.
 2021-02-18 20:42:42,602 : WARN  : KNIME-Worker-43-Scatter Plot (local) 4:5 :  : Node : Scatter Plot (local) : 4:5 : Only the first 2500 rows are displayed.
+2021-02-19 18:23:29,340 : WARN  : main :  : Node : Normalizer (PMML) : 3:2 : All numeric columns are used for normalization. Mode: Z-Score Normalization
+2021-02-19 18:24:07,212 : WARN  : main :  : Node : Partitioning : 3:3 : No sampling method selected
+2021-02-19 18:25:04,216 : WARN  : main :  : Node : Scorer : 3:6 : No columns selected yet.
+2021-02-19 18:25:27,136 : WARN  : KNIME-Worker-10-Logistic Regression Learner 3:4 :  : Node : Logistic Regression Learner : 3:4 : The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2021-02-19 18:33:26,947 : WARN  : main :  : Node : Normalizer (PMML) : 4:3 : All numeric columns are used for normalization. Mode: Z-Score Normalization
+2021-02-19 18:34:24,979 : WARN  : main :  : Node : Partitioning : 4:5 : No sampling method selected
+2021-02-19 18:35:20,864 : WARN  : main :  : Node : Scorer : 4:8 : No columns selected yet.
+2021-02-19 18:35:30,830 : ERROR : KNIME-Worker-16-CSV Reader 4:1 :  : Node : CSV Reader : 4:1 : Execute failed: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+java.lang.RuntimeException: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:108)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.toRow(GenericDefaultIndividualTableReader.java:104)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutputWithProgress(GenericDefaultIndividualTableReader.java:138)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutput(GenericDefaultIndividualTableReader.java:112)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultMultiTableRead.fillRowOutput(GenericDefaultMultiTableRead.java:131)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.fillRowOutput(GenericMultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.readTable(GenericMultiTableReader.java:176)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:154)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NumberFormatException: For input string: "1e+05"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:172)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:384)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:239)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:106)
+	... 20 more
+2021-02-19 18:36:08,803 : ERROR : KNIME-Worker-19-CSV Reader 4:1 :  : Node : CSV Reader : 4:1 : Execute failed: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+java.lang.RuntimeException: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:108)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.toRow(GenericDefaultIndividualTableReader.java:104)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutputWithProgress(GenericDefaultIndividualTableReader.java:138)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutput(GenericDefaultIndividualTableReader.java:112)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultMultiTableRead.fillRowOutput(GenericDefaultMultiTableRead.java:131)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.fillRowOutput(GenericMultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.readTable(GenericMultiTableReader.java:176)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:154)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NumberFormatException: For input string: "1e+05"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:172)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:384)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:239)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:106)
+	... 20 more
+2021-02-19 18:37:08,992 : ERROR : KNIME-Worker-20-CSV Reader 4:1 :  : Node : CSV Reader : 4:1 : Execute failed: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+java.lang.RuntimeException: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:108)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.toRow(GenericDefaultIndividualTableReader.java:104)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutputWithProgress(GenericDefaultIndividualTableReader.java:138)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutput(GenericDefaultIndividualTableReader.java:112)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultMultiTableRead.fillRowOutput(GenericDefaultMultiTableRead.java:131)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.fillRowOutput(GenericMultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.readTable(GenericMultiTableReader.java:176)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:154)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NumberFormatException: For input string: "1e+05"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:172)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:384)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:239)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:106)
+	... 20 more
+2021-02-19 18:37:10,626 : ERROR : KNIME-Worker-21-CSV Reader 4:1 :  : Node : CSV Reader : 4:1 : Execute failed: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+java.lang.RuntimeException: The following row could not be converted to the specified KNIME types: [1e+05, -1.40863322829137, -1.624697936324, 2.54774230369692, 0.385671523516146, 0.502790072699087, 0.507194721385658, -1.74443114473473, 0.760594225747498, 3.00170400322912, -1.16309493493591, 0.393516209370638, -1.9761080196344, 0.231283936059375, 0.526783847087809, -3.23246747614055, 0.021830807795285, 0.519902436567202, 1.12642627868296, 0.0800098779433671, 0.209032736561698, 0.21764082393781, 0.758246770655715, 0.281254134069628, 0.736607975853892, -0.741402076374565, 0.255349902866452, 0.141944167181525, 0.228167205092217, 49.5, 0]
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:108)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.toRow(GenericDefaultIndividualTableReader.java:104)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutputWithProgress(GenericDefaultIndividualTableReader.java:138)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultIndividualTableReader.fillOutput(GenericDefaultIndividualTableReader.java:112)
+	at org.knime.filehandling.core.node.table.reader.GenericDefaultMultiTableRead.fillRowOutput(GenericDefaultMultiTableRead.java:131)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.fillRowOutput(GenericMultiTableReader.java:90)
+	at org.knime.filehandling.core.node.table.reader.GenericMultiTableReader.readTable(GenericMultiTableReader.java:176)
+	at org.knime.filehandling.core.node.table.reader.TableReaderNodeModel.execute(TableReaderNodeModel.java:154)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.lang.NumberFormatException: For input string: "1e+05"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at org.knime.base.node.io.filehandling.csv.reader.api.IntegerParser.parseInt(IntegerParser.java:75)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:172)
+	at org.knime.base.node.io.filehandling.csv.reader.api.StringReadAdapterFactory$StringToIntCellValueProducer.produceIntCellValue(StringReadAdapterFactory.java:1)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:79)
+	at org.knime.core.data.convert.map.IntCellValueProducer.produceCellValue(IntCellValueProducer.java:1)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer$ObjectMapper.map(DefaultDataRowProducer.java:384)
+	at org.knime.core.data.convert.map.DefaultDataRowProducer.produceDataRow(DefaultDataRowProducer.java:239)
+	at org.knime.filehandling.core.node.table.reader.type.mapping.DefaultTypeMapper.map(DefaultTypeMapper.java:106)
+	... 20 more
+2021-02-19 19:19:39,485 : WARN  : ModalContext :  : Node : File Reader : 5:1 : The file 'file:/Users/joseluisperisadsuara/Documents/DATA%202.0/CLASES/FEBRERO/19%20VIERNES%204H/breastcancer.csv' can't be accessed anymore!
+2021-02-19 19:19:39,493 : WARN  : ModalContext :  : Node : File Reader : 5:1 : Can't access 'file:/Users/joseluisperisadsuara/Documents/DATA%202.0/CLASES/FEBRERO/19%20VIERNES%204H/breastcancer.csv'. (\Users\joseluisperisadsuara\Documents\DATA 2.0\CLASES\FEBRERO\19 VIERNES 4H\breastcancer.csv (El sistema no puede encontrar la ruta especificada))
+2021-02-19 19:21:40,012 : WARN  : KNIME-Worker-23-Logistic Regression Learner 3:4 :  : Node : Logistic Regression Learner : 3:4 : The algorithm did not reach convergence after the specified number of epochs. Setting the epoch limit higher might result in a better model.
+2021-02-19 20:30:36,973 : WARN  : ModalContext :  : Node : Color Manager : 6:67 : Column "Churn" has no nominal values set: execute predecessor or add Binner.
+2021-02-19 20:31:20,979 : WARN  : KNIME-Worker-33-File Reader 6:91 :  : Node : Color Manager : 6:67 : Column "Churn" has no nominal values set: execute predecessor or add Binner.
+2021-02-19 20:31:22,727 : WARN  : KNIME-Worker-32-Excel Reader 6:110 :  : Node : Color Manager : 6:67 : Column "Churn" has no nominal values set: execute predecessor or add Binner.
+2021-02-19 20:31:22,927 : WARN  : KNIME-Worker-35-Number To String 6:105 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:22,927 : WARN  : KNIME-Worker-35-Number To String 6:105 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:22,927 : WARN  : KNIME-Worker-35-Number To String 6:105 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:22,978 : WARN  : KNIME-Worker-37-Partitioning 6:61 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:22,979 : WARN  : KNIME-Worker-37-Partitioning 6:61 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:22,979 : WARN  : KNIME-Worker-37-Partitioning 6:61 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:23,233 : WARN  : KNIME-Worker-38-Decision Tree Learner 6:101 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:23,233 : WARN  : KNIME-Worker-38-Decision Tree Learner 6:101 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:23,233 : WARN  : KNIME-Worker-38-Decision Tree Learner 6:101 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:23,370 : WARN  : KNIME-Worker-39-Decision Tree Predictor 6:65 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:23,370 : WARN  : KNIME-Worker-39-Decision Tree Predictor 6:65 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:31:23,370 : WARN  : KNIME-Worker-39-Decision Tree Predictor 6:65 :  : DataTableSpec : Decision Tree Predictor : 6:65 : DataColumnSpec already contains a color handler, ignoring color handler from second spec.
+2021-02-19 20:37:46,093 : WARN  : main :  : Node : ROC Curve : 3:7 : Class column 'null ' does not exist
+2021-02-19 20:38:53,956 : WARN  : main :  : Node : ROC Curve : 3:7 : No curves included
+2021-02-19 20:41:16,535 : WARN  : main :  : Node : ROC Curve : 3:7 : No curves included
+2021-02-20 11:10:10,664 : WARN  : main :  : Node : Decision Tree Learner : 3:0:16 : Class column "class" not found or incompatible
+2021-02-20 11:11:04,372 : WARN  : ModalContext :  : Node : ROC Curve : 6:7 : No curves included
+2021-02-20 11:12:12,341 : ERROR : main :  : RegressionPredictorNodeDialogPane : Regression Predictor : 3:4 : Error loading model settings
+java.lang.NullPointerException
+	at org.knime.base.node.mine.regression.predict3.RegressionPredictorNodeModel.checkModelTargetType(RegressionPredictorNodeModel.java:227)
+	at org.knime.base.node.mine.regression.predict3.RegressionPredictorNodeDialogPane.loadSettingsFrom(RegressionPredictorNodeDialogPane.java:228)
+	at org.knime.core.node.NodeDialogPane.callDerivedLoadSettingsFrom(NodeDialogPane.java:513)
+	at org.knime.core.node.NodeDialogPane$3.run(NodeDialogPane.java:466)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2021-02-20 11:13:10,386 : WARN  : main :  : Node : Partitioning : 3:7 : No sampling method selected
+2021-02-20 11:13:27,575 : WARN  : main :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:13:27,575 : WARN  : main :  : Node : Scorer : 3:6 : No columns selected yet.
+2021-02-20 11:16:02,779 : WARN  : main :  : Node : Linear Correlation : 3:8 : Auto configuration: Using all suitable columns (in total 14)
+2021-02-20 11:18:37,246 : WARN  : main :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:18:37,247 : WARN  : main :  : Node : Scorer : 3:6 : No columns selected yet.
+2021-02-20 11:18:40,897 : WARN  : KNIME-Worker-19-Regression Predictor 3:4 :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:18:40,897 : WARN  : KNIME-Worker-19-Regression Predictor 3:4 :  : Node : Scorer : 3:6 : No columns selected yet.
+2021-02-20 11:19:33,402 : WARN  : main :  : Node : Numeric Scorer : 3:9 : No columns selected for reference
+2021-02-20 11:21:50,358 : WARN  : main :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:21:51,997 : WARN  : KNIME-Worker-26-Regression Predictor 3:4 :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:22:07,842 : WARN  : main :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:22:09,837 : WARN  : KNIME-Worker-28-Regression Predictor 3:4 :  : Node : ROC Curve : 3:5 : Class column 'null ' does not exist
+2021-02-20 11:39:41,546 : ERROR : KNIME-Worker-65-Histogram 3:19 :  : Node : Histogram : 3:19 : Execute failed: No column selected for binning.
+java.lang.IllegalArgumentException: No column selected for binning.
+	at org.knime.dynamic.js.base.grouped.BinningProcessor.processInputObjects(BinningProcessor.java:72)
+	at org.knime.dynamic.js.v30.DynamicJSNodeModel.performExecuteCreateView(DynamicJSNodeModel.java:652)
+	at org.knime.js.core.node.AbstractImageWizardNodeModel.performExecute(AbstractImageWizardNodeModel.java:102)
+	at org.knime.js.core.node.AbstractWizardNodeModel.execute(AbstractWizardNodeModel.java:136)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2021-02-20 11:40:17,445 : ERROR : KNIME-Worker-65-Histogram 3:19 :  : Node : Histogram : 3:19 : Execute failed: No column selected for binning.
+java.lang.IllegalArgumentException: No column selected for binning.
+	at org.knime.dynamic.js.base.grouped.BinningProcessor.processInputObjects(BinningProcessor.java:72)
+	at org.knime.dynamic.js.v30.DynamicJSNodeModel.performExecuteCreateView(DynamicJSNodeModel.java:652)
+	at org.knime.js.core.node.AbstractImageWizardNodeModel.performExecute(AbstractImageWizardNodeModel.java:102)
+	at org.knime.js.core.node.AbstractWizardNodeModel.execute(AbstractWizardNodeModel.java:136)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2021-02-20 11:41:27,894 : WARN  : main :  : Node : Decision Tree Learner : 3:0:16 : Class column "class" not found or incompatible
+2021-02-20 11:42:26,352 : ERROR : KNIME-Worker-77-Histogram 3:19 :  : Node : Histogram : 3:19 : Execute failed: No column selected for binning.
+java.lang.IllegalArgumentException: No column selected for binning.
+	at org.knime.dynamic.js.base.grouped.BinningProcessor.processInputObjects(BinningProcessor.java:72)
+	at org.knime.dynamic.js.v30.DynamicJSNodeModel.performExecuteCreateView(DynamicJSNodeModel.java:652)
+	at org.knime.js.core.node.AbstractImageWizardNodeModel.performExecute(AbstractImageWizardNodeModel.java:102)
+	at org.knime.js.core.node.AbstractWizardNodeModel.execute(AbstractWizardNodeModel.java:136)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:576)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1245)
+	at org.knime.core.node.Node.execute(Node.java:1025)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:558)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:95)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:334)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:210)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2021-02-20 11:42:26,363 : WARN  : KNIME-Worker-76-X-Partitioner 3:0:2 :  : Node : Decision Tree Learner : 3:0:16 : Class column "class" not found or incompatible

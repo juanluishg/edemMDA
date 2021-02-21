@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="workflow.knime">
-<entry key="created_by" type="xstring" value="4.3.0.v202011281201"/>
+<entry key="created_by" type="xstring" value="4.3.1.v202101261633"/>
 <entry key="created_by_nightly" type="xboolean" value="false"/>
 <entry key="version" type="xstring" value="4.1.0"/>
 <entry key="name" type="xstring" isnull="true" value=""/>
 <config key="authorInformation">
 <entry key="authored-by" type="xstring" value="rosy"/>
 <entry key="authored-when" type="xstring" value="2015-04-23 13:26:33 +0200"/>
-<entry key="lastEdited-by" type="xstring" value="Daria"/>
-<entry key="lastEdited-when" type="xstring" value="2020-11-30 12:47:01 +0100"/>
+<entry key="lastEdited-by" type="xstring" value="juanl"/>
+<entry key="lastEdited-when" type="xstring" value="2021-02-19 20:42:56 +0100"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
-<entry key="state" type="xstring" value="IDLE"/>
+<entry key="state" type="xstring" value="EXECUTED"/>
 <config key="workflow_credentials"/>
 <config key="annotations">
 <config key="annotation_0">

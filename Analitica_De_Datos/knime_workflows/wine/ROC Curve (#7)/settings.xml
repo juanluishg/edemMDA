@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+<entry key="node_file" type="xstring" value="settings.xml"/>
+<config key="flow_stack"/>
+<config key="internal_node_subsettings">
+<entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+</config>
+<config key="model">
+<entry key="hideInWizard" type="xboolean" value="false"/>
+<entry key="generateImage" type="xboolean" value="false"/>
+<entry key="showArea" type="xboolean" value="true"/>
+<entry key="showGrid" type="xboolean" value="true"/>
+<entry key="resizeToWindow" type="xboolean" value="true"/>
+<entry key="displayFullscreenButton" type="xboolean" value="true"/>
+<entry key="imageWidth" type="xint" value="800"/>
+<entry key="imageHeight" type="xint" value="600"/>
+<entry key="backgroundColor" type="xstring" value="rgba(255,255,255,1.0)"/>
+<entry key="dataAreaColor" type="xstring" value="rgba(230,230,230,1.0)"/>
+<entry key="gridColor" type="xstring" value="rgba(255,255,255,1.0)"/>
+<entry key="lineWidth" type="xint" value="2"/>
+<entry key="title" type="xstring" value="ROC Curve"/>
+<entry key="subtitle" type="xstring" value=""/>
+<entry key="yAxisTitle" type="xstring" value="True Positive Rate"/>
+<entry key="xAxisTitle" type="xstring" value="False Positive Rate"/>
+<entry key="showLegend" type="xboolean" value="true"/>
+<entry key="enableControls" type="xboolean" value="true"/>
+<entry key="enableEditTitle" type="xboolean" value="true"/>
+<entry key="enableEditSubtitle" type="xboolean" value="true"/>
+<entry key="enableEditXAxisLabel" type="xboolean" value="true"/>
+<entry key="enableEditYAxisLabel" type="xboolean" value="true"/>
+<entry key="showWarningInView" type="xboolean" value="true"/>
+<entry key="ignoreMissingValues" type="xboolean" value="false"/>
+<entry key="classColumn" type="xstring" value="Prediction (color)"/>
+<config key="positiveClass">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
+<config key="org.knime.core.data.def.StringCell">
+<entry key="StringCell" type="xstring" value="white"/>
+</config>
+</config>
+<entry key="maxPoints" type="xint" value="2000"/>
+<config key="numColumns">
+<entry key="filter-type" type="xstring" value="STANDARD"/>
+<config key="included_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="excluded_names">
+<entry key="array-size" type="xint" value="11"/>
+<entry key="0" type="xstring" value="fixed acidity"/>
+<entry key="1" type="xstring" value="volatile acidity"/>
+<entry key="2" type="xstring" value="citric acid"/>
+<entry key="3" type="xstring" value="residual sugar"/>
+<entry key="4" type="xstring" value="chlorides"/>
+<entry key="5" type="xstring" value="free sulfur dioxide"/>
+<entry key="6" type="xstring" value="total sulfur dioxide"/>
+<entry key="7" type="xstring" value="density"/>
+<entry key="8" type="xstring" value="pH"/>
+<entry key="9" type="xstring" value="sulphates"/>
+<entry key="10" type="xstring" value="alcohol"/>
+</config>
+<entry key="enforce_option" type="xstring" value="EnforceInclusion"/>
+<config key="name_pattern">
+<entry key="pattern" type="xstring" value=""/>
+<entry key="type" type="xstring" value="Wildcard"/>
+<entry key="caseSensitive" type="xboolean" value="true"/>
+</config>
+<config key="datatype">
+<config key="typelist">
+<entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+<entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
+<entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
+<entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+<entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+<entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
+</config>
+</config>
+</config>
+<entry key="customCSS" type="xstring" value=""/>
+</config>
+<entry key="customDescription" type="xstring" isnull="true" value=""/>
+<entry key="state" type="xstring" value="IDLE"/>
+<config key="nodecontainer_message">
+<entry key="type" type="xstring" value="WARNING"/>
+<entry key="message" type="xstring" value="No curves included"/>
+</config>
+<entry key="factory" type="xstring" value="org.knime.js.base.node.viz.plotter.roc.ROCCurveNodeFactory"/>
+<entry key="node-name" type="xstring" value="ROC Curve"/>
+<entry key="node-bundle-name" type="xstring" value="KNIME JavaScript Base Views"/>
+<entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.js.views"/>
+<entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-bundle-version" type="xstring" value="4.3.0.v202011211957"/>
+<entry key="node-feature-name" type="xstring" value="KNIME JavaScript Views"/>
+<entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.js.views.feature.group"/>
+<entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-feature-version" type="xstring" value="4.3.0.v202011211957"/>
+<config key="factory_settings"/>
+<entry key="name" type="xstring" value="ROC Curve"/>
+<entry key="hasContent" type="xboolean" value="false"/>
+<entry key="isInactive" type="xboolean" value="false"/>
+<config key="ports">
+<config key="port_1">
+<entry key="index" type="xint" value="1"/>
+<entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+</config>
+<config key="port_2">
+<entry key="index" type="xint" value="2"/>
+<entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+</config>
+</config>
+<config key="filestores">
+<entry key="file_store_location" type="xstring" isnull="true" value=""/>
+<entry key="file_store_id" type="xstring" isnull="true" value=""/>
+</config>
+</config>

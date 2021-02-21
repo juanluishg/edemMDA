@@ -1,1 +1,4 @@
+file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/Bostondata.csv
+file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/creditcard.csv
+file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/wine.csv
 file:/D:/Master/edemMDA/Analitica_De_Datos/datasets/CC%20GENERAL.csv
