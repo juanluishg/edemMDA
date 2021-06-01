@@ -1,0 +1,18 @@
+# Todas las librerías que se han ido incluyendo en 
+# los distintos scripts deben aparecer aquí, indicando
+# los rangos de vesriones aceptables.
+# En las referencias del primer "HowTo" teneís un enlace
+# para saber cómo manejar estos rangos.
+
+# Constucción del modelo
+numpy>=1.18.1,<1.19.0
+pandas>=0.25.3,<0.26.0
+scikit-learn>=0.22.1,<0.23.0
+joblib>=0.14.1,<0.15.0
+
+# Tests
+pytest>=5.3.2,<6.0.0
+
+# Construcción de librerías
+setuptools>=41.4.0,<42.0.0
+wheel>=0.33.6,<0.34.0

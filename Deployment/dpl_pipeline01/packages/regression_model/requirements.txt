@@ -1,0 +1,5 @@
+# Para especificar el rango de versiones puedes utilizar la referencia https://www.python.org/dev/peps/pep-0440/#compatible-release. 
+# Usar rangos en lugar de versiones concretas da flexibilidad a los usuarios mientras que se previene la instalación de una versión con cambios que podrían ser incompatibles.
+numpy>=1.18.1,<1.19.0
+pandas>=0.25.3,<0.26.0
+scikit-learn>=0.22.1,<0.23.0
